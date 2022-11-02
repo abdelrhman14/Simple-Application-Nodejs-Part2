@@ -13,8 +13,8 @@ pipeline {
             steps {
                   withCredentials([usernamePassword(credentialsId: 'dockerhub_key', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')])
                 {
-                    sh "sudo docker login -u ${USERNAME} -p ${PASSWORD}"
-                    sh "sudo docker build -t app_img79 ."
+                    sh "docker login -u ${USERNAME} -p ${PASSWORD}"
+                    sh "docker build -t app_img79 ."
                     sh "docker push app_img79"
                     
                 }
