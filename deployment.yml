@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: myapp_nodejs
-          image: abdo/app_image:latest
+          image: abdelrahman1413/nodejs-image33
           ports:
             - name: httpport
               containerPort: 3000
