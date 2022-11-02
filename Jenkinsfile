@@ -14,7 +14,7 @@ pipeline {
                   withCredentials([usernamePassword(credentialsId: 'dockerhub_key', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')])
                 {
                     sh "docker login -u ${USERNAME} -p ${PASSWORD}"
-                    sh "docker docker build . -t app_img"
+                    sh "docker build -t app_img ."
                     sh "docker tag app_image abdelrahman1413/app_image"
                     sh "docker push abdelrahman1413/app_image"
                     
