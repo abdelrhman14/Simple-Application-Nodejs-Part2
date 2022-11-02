@@ -15,7 +15,6 @@ pipeline {
                 {
                     sh "docker login -u ${USERNAME} -p ${PASSWORD}"
                     sh "docker build -t app_img ."
-                    sh "docker tag app_image abdelrahman1413/app_image"
                     sh "docker push abdelrahman1413/app_image"
                     
                 }
