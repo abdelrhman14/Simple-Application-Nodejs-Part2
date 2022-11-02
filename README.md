@@ -9,3 +9,22 @@
     docker tag nodejs-image33:latest abdelrahman1413/nodejs-image33
     docker push abdelrahman1413/nodejs-image33
 ![endday1(1)](https://user-images.githubusercontent.com/42601017/199501655-d58e56a7-ce09-491e-9257-73739cf3e05d.png)
+4. Deployment
+    - NameSpace [application]
+    - Deploy app
+    - Loadbalancer 
+    kubectl create namespace application
+    kubectl apply -f deployment.yml -n application
+    kubectl apply -f app_loadbalancer.yml -n application
+    
+    
+ ### [Hint] Install Plugins:
+    -  Docker
+    - Role-based Authorization Strategy
+ ###  ### [Hint] Credentials:
+    - Docker
+    - GitHub
+  
+
+    ![End](https://user-images.githubusercontent.com/42601017/199502864-27e6d1e5-9532-4f37-bc08-9e834b6416c1.png)
+
