@@ -25,6 +25,7 @@ pipeline {
             steps {
             
                           sh """
+                          kubectl config set-context --current --namespace=application
                     kubectl apply -f ./deployment.yml -n application
                     kubectl apply -f ./app_loadbalancer.yml -n application
 
