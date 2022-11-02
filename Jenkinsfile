@@ -23,12 +23,8 @@ pipeline {
         }
          stage ('deployment application'){
             steps {
-               sh "kubectl apply -f namespace.yml"
-               sh "kubectl get namespace" 
-              // sh "kubectl config set-context --current --namespace=application"
-              // sh "kubectl config view --minify | grep namespace:" 
-             //  sh "kubectl apply -f deployment.yml"
-             //  sh "kubectl apply -f app_loadbalancer.yml"
+                    sh "kubectl apply -f deployment.yml --namespace=application"
+                    sh "kubectl apply -f app_loadbalancer.yml --namespace=application"
 
                 sh "echo Successful"
             
