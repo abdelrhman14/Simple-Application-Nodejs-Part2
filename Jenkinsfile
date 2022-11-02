@@ -24,6 +24,7 @@ pipeline {
          stage ('deployment application'){
             steps {
                 sh """
+                cd application
                 kubectl apply -f namespace.yml
                 kubectl apply -f deployment.yml
                 kubectl apply -f app_loadbalancer.yml
