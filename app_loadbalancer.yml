@@ -6,7 +6,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: myapp_nodejs
+    app: nodejs
   ports:
     - protocol: TCP
       port: 3000
