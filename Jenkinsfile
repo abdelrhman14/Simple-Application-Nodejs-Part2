@@ -23,12 +23,12 @@ pipeline {
         }
          stage ('deployment application'){
             steps {
-                sh "gcloud compute ssh --zone "us-east1-b" "iti-instance"  --tunnel-through-iap --project "abdelrahmantarek-project""
-                    sh "kubectl apply -f deployment.yml"
-                    sh "kubectl apply -f app_loadbalancer.yml"
+                          sh """
+                    kubectl apply -f deployment.yml
+                    kubectl apply -f app_loadbalancer.yml
 
-                sh "echo Successful"
-            
+                echo Successful
+            """
             }
         
         }
