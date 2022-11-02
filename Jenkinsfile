@@ -25,9 +25,8 @@ pipeline {
             steps {
             
                           sh """
-                    kubectl create namespace application
-                    kubectl apply -f ./deployment.yml -n application 
-                    kubectl apply -f ./app_loadbalancer.yml -n application
+                    kubectl apply -f ./deployment.yml
+                    kubectl apply -f ./app_loadbalancer.yml
 
                 echo Successful
             """
