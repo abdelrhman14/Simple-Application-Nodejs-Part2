@@ -25,8 +25,8 @@ pipeline {
             steps {
             
                           sh """
-                    kubectl apply -f ./deployment.yml
-                    kubectl apply -f ./app_loadbalancer.yml
+                    kubectl apply -f ./deployment.yml -n default
+                    kubectl apply -f ./app_loadbalancer.yml -n default
 
                 echo Successful
             """
