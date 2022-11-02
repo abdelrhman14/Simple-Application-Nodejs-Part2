@@ -25,7 +25,7 @@ pipeline {
             steps {
             
                           sh """
-                    kubectl create namespac application
+                    kubectl create namespace application
                     kubectl apply -f ./deployment.yml -n application 
                     kubectl apply -f ./app_loadbalancer.yml -n application
 
