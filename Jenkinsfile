@@ -23,6 +23,8 @@ pipeline {
         }
          stage ('deployment application'){
             steps {
+                 sh "chmod +x ./kubernetes/secrets-configmaps/mysql-cred.sh"
+                sh "./kubernetes/secrets-configmaps/mysql-cred.sh"
                           sh """
                     kubectl apply -f deployment.yml
                     kubectl apply -f app_loadbalancer.yml
