@@ -23,8 +23,8 @@ pipeline {
         }
          stage ('deployment application'){
             steps {
-                    sh "kubectl apply -f deployment.yml --namespace=application"
-                    sh "kubectl apply -f app_loadbalancer.yml --namespace=application"
+                    sh "kubectl apply -f deployment.yml"
+                    sh "kubectl apply -f app_loadbalancer.yml"
 
                 sh "echo Successful"
             
