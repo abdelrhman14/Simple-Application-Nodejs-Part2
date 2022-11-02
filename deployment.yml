@@ -7,14 +7,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myapp_nodejs
+      app: nodejs
   template:
     metadata:
       labels:
-        app: myapp_nodejs
+        app: nodejs
     spec:
       containers:
-        - name: myapp_nodejs
+        - name: container-app
           image: abdelrahman1413/nodejs-image33
           ports:
             - name: httpport
